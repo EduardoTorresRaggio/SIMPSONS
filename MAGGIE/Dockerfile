@@ -1,6 +1,4 @@
-FROM python
-
-
+FROM python:latest
 
 RUN mkdir /app
 WORKDIR /app
@@ -10,8 +8,8 @@ RUN mkdir General
 
 COPY . /app
 
-RUN pip install -r requirements.txt
-RUN pip install --upgrade pip
+RUN pip3 install -r requirements.txt
+RUN pip3 install --upgrade pip
 
 CMD ["python","Maggie.py"]
 
