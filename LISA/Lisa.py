@@ -43,17 +43,13 @@ while True:
    frase_simpson:str = datos[0]['quote']
    autor:str = datos[0]['character']
    
-   #COMPROBACIÓN DE QUE FUNCIONA LA PETICION
-   print(autor)
-   print(frase_simpson)
-   print(autoresfrases)
    simbolos = '!"#$%&()*+,-./:;<=>?@[\]^_`{|}~'
    new_frase = frase_simpson.translate(str.maketrans('','',simbolos))
    contar = contar_palabras(new_frase,contar)
    
    print(contar)
 
-   with open('Simpson/diccionariospalabras.csv', 'w') as file:
+   with open('DiccionarioPalabras/diccionariospalabras.csv', 'w') as file:
     writer = csv.writer(file,delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
     for key, value in contar.items():
         writer.writerow((key, value))
@@ -71,7 +67,7 @@ while True:
         handler.write(img_data)
 
     #recorrer directorio
-    direc = 'C:\\Users\\sragg\\Documents\\GitHub\\EDEM2022\\Simpson'
+    direc = '/app'
     with os.scandir(direc) as ficheros:
       for i in ficheros:
         if i.name == autor:
@@ -84,7 +80,7 @@ while True:
      ######################  GUARDAR FRASE AUTOR  ####################
 
     #esta es la dirección del autor
-    direc = 'C:\\Users\\sragg\\Documents\\GitHub\\EDEM2022\\Simpson'
+    direc = '/app'
     directory99 = autor
     path99 = os.path.join(direc,directory99)
     archivo = 'autor.csv'
@@ -109,11 +105,9 @@ while True:
     #añadir el autor a la lista
     autoresfrases.append(autor)
 
-    print(f"{autoresfrases}\n")
-
     #crear carpeta autor
     directory = autor
-    parent_dir = 'C:\\Users\\sragg\\Documents\\GitHub\\EDEM2022\\Simpson'
+    parent_dir = '/app'
     path = os.path.join(parent_dir,directory)
     os.mkdir(path)
 

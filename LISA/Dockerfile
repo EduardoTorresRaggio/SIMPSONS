@@ -1,0 +1,13 @@
+FROM python:latest
+
+RUN mkdir /app
+WORKDIR /app
+
+RUN mkdir DiccionarioPalabras
+
+COPY . /app
+
+RUN pip3 install -r requirements.txt
+RUN pip3 install --upgrade pip
+
+CMD ["python","Lisa.py"]
