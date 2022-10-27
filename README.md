@@ -86,7 +86,34 @@ Es importante saber las partes que lo componen, por ello las vamos a detallar:
 - csv.writer()= en esta parte definimos como queremos que nos añada las frases. Por ejemplo si queremos separarlo por || y otros estilos.
 - spamwriter.writerow(frase_simpson): aquí le decimos a la función que queremos que nos añada al archivo CSV previamente creado
 
+#### Cuarte parte: Bucle condicional 'if'
+Cuando el codigo haga la peticion a la API nos devolverá una frase con un autor, y como para el ejercicio nos pide que separemos en función de Lisa y Homer es necesario que pensemos en un pseudocódigo de esta manera 'si el autor es Lisa, guardalo en lisa y si es Homer, guardalo en Homer'
 
-**Free Software, Hell Yeah!**
+Entonces el bucle condicional que necesitamos es if con un elif ya que si no es uno será el otro.
 
+Dentro del bucle habrá que escribir la frase del autor, por tanto el trozo de codigo quedará de esta manera
+
+- En el caso de Lisa
+```
+if autor == 'Lisa':
+    #guardar la frase en csv de Lisa
+    with open('Lisa/lisa.csv', 'a', newline='') as csvfile:
+     spamwriter = csv.writer(csvfile)
+     spamwriter.writerow(frase_simpson)
+```
+- En el caso de Homer
+```
+ elif autor == 'Homer Simpson':
+    with open('Homer/homer.csv', 'a', newline='') as csvfile:
+     spamwriter = csv.writer(csvfile)
+     spamwriter.writerow(frase_simpson)
+    #guardar la frase en csv de Homer 
+```
+
+#### Quinta parte: Hacer una petición cada 30 segundos
+Para ello usaremos uno de los modulos que hemos importado,time
+Quedando de la siguiente manera:
+```
+timesleep(30)
+```
 
