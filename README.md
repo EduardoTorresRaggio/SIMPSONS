@@ -1,4 +1,5 @@
 # RETO SIMPSON
+![](https://i.pinimg.com/originals/31/9c/08/319c08b4f69445ad6270a4a2d46b9f14.jpg)
 ## 1º RETO: MAGGIE
 
 Los objetivos de este reto son:
