@@ -22,7 +22,3 @@ Los objetivos de este reto son:
 | Visual Studio Code   | Implementación de código    |
 | Python   | Lenguaje de programación    |
 | Google Collab | Servicio en la nube para programación |
-
-### SEGUNDO PASO
-A continuación pasamos a la codificación, para ello usaremos el lenguaje Pyhton
-![Descripción de la imagen](https://seovalladolid.es/wp-content/uploads/2021/02/python.png)
